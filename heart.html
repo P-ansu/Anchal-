@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Animation</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heart {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background: red;
+            transform: rotate(-45deg);
+            animation: heartbeat 1.5s infinite; /* Slower Heartbeat Animation */
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -75px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 75px;
+            top: 0;
+        }
+
+        .text {
+            position: absolute;
+            color: white;
+            font-family: "Arial", sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 10;
+            width: 100%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            top: 50%;
+            left: 50%;
+        }
+
+        .name {
+            font-size: 24px;
+            font-family: "Cursive", sans-serif;
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* ❤️ Slower Heartbeat Animation */
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(-45deg); }
+            30% { transform: scale(1.1) rotate(-45deg); }
+            60% { transform: scale(1) rotate(-45deg); }
+            90% { transform: scale(1.1) rotate(-45deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <div class="text">
+            I LOVE YOU <br>
+            <span class="name">Anchal</span>
+        </div>
+    </div>
+</body>
+</html>
